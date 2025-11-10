@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Floating Chat Button */
+.chat-button {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.85); /* slightly translucent */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12); /* softer, more natural shadow */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  z-index: 999;
+}
+.chat-button:hover {
+  transform: scale(1.1);
+}
+.chat-button img {
+  width: 40px;
+  filter: brightness(0) saturate(100%) invert(30%) sepia(99%) saturate(7481%) hue-rotate(197deg) brightness(101%) contrast(103%);
+  object-fit: contain;
+}
+
+/* Chat Window */
+.chat-overlay {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 320px;
+  max-width: 90vw;       /* ✅ Prevents it from overflowing on smaller screens */
+  height: 420px;
+  background: rgb(255, 255, 255); /* slightly translucent */
+  backdrop-filter: blur(6px);
+   -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12); /* softer, more natural shadow */
+  border: none;
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+  animation: slideUp 0.3s ease;
+}
+
+
+/* Slide animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Header */
+.chat-header {
+  background-color: #006de1; /* blue */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+.chat-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.chat-header-left img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.chat-header-left h4 {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+.chat-header-left p {
+  font-size: 10px;
+  color: white;
+}
+
+/* Messages area */
+.chat-body {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;      /* ✅ Removes horizontal scroll */
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  scroll-behavior: smooth;
+}
+
+.chat-message {
+  max-width: 80%;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  display: inline-block;
+  box-sizing: border-box;   /* ✅ Prevents padding from increasing total width */
+}
+
+.chat-message.bot {
+  background-color: #e9e9e9;
+  align-self: flex-start;
+}
+.chat-message.user {
+  background-color: #006de1;
+  color: white;
+  align-self: flex-end;
+}
+
+/* Input bar */
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  gap: 8px;
+}
+.chat-input input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-size: 13px;
+  background-color: #f1f1f1;
+}
+.chat-input button {
+  border: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chat-input button img{
+    width: 25px;
+    object-fit: contain;
+}
+.close-chat {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+/* Email field on top of chat */
+.chat-email-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background-color: #f8f8f8;
+}
+
+.chat-email-top label {
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+}
+
+.chat-email-top input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+

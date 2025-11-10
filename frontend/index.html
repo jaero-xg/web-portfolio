@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/portfolio-page-tabs.css" />
+    <link rel="stylesheet" href="css/nav-active.css" />
+    <link rel="stylesheet" href="css/chatbox.css" />
+    <link
+      rel="stylesheet"
+      href="css/responsive-1024.css"
+      media="screen and (max-width: 1024px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/responsive-768.css"
+      media="screen and (max-width: 768px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/responsive-480.css"
+      media="screen and (max-width: 480px)"
+    />
+    <link rel="icon" type="image/png" href="img/portfolio-logo.png" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div class="page-transition"></div>
+    <header>
+      <nav class="navbar" aria-label="Main navigation">
+        <div class="logo">Amer.</div>
+
+        <!-- Hamburger / menu toggle -->
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-label="Toggle navigation"
+        >
+          ☰
+        </button>
+
+        <!-- Nav links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#Home-page">Home</a></li>
+          <li><a href="#About-page">About</a></li>
+          <li><a href="#Portfolio-page">Portfolio</a></li>
+          <li><a href="#Contact-page">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="Hero-page" id="Home-page">
+      <div class="text-section-Hero-page">
+        <div class="hero-status">
+          <img src="img/codeIcon.png" />
+          <p>Ready to Innovate</p>
+        </div>
+        <div class="Job-Hero-page">
+          <div class="job-title-container">
+            <h3 id="job-title">Frontend Developer</h3>
+          </div>
+        </div>
+        <div class="hero-page-current-Job">
+          <h4>University Lecturer</h4>
+        </div>
+        <div class="Hero-page-description">
+          <p>
+            I design user-friendly interfaces in Figma and build them into
+            responsive front-end websites.
+          </p>
+        </div>
+        <div class="hero-page-btn-bottom">
+          <button
+            class="hero-page-btn"
+            onclick="location.href='#Portfolio-page'"
+          >
+            <span>Projects</span>
+            <img src="img/openIcon.png" alt="Contact Icon" />
+          </button>
+          <button class="hero-page-btn" onclick="location.href='#Contact-page'">
+            <span>Contact</span>
+            <img src="img/contactIcon.png" alt="Contact Icon" />
+          </button>
+        </div>
+        <div class="hero-page-buttom-icons">
+          <div class="buttom-icon-hero">
+            <img src="img/githubIcon.png" />
+          </div>
+          <div class="buttom-icon-hero">
+            <img src="img/linkedInBW.png" />
+          </div>
+          <div class="buttom-icon-hero">
+            <img src="img/IgBW.png" />
+          </div>
+        </div>
+      </div>
+      <div class="Hero-image">
+        <img src="img/image_hero.png" />
+      </div>
+    </section>
+    <section class="About-page" id="About-page">
+      <div class="upper-text-About-page">
+        <h4>Hello, I'm</h4>
+        <h3>John Amer Royo</h3>
+        <p>
+          a BSIT graduate and currently a lecturer at Romblon State University.
+          I have a passion for creating and exploring — from designing intuitive
+          UI/UX interfaces to experimenting with augmented reality and 3D
+          modeling. Coding started as a hobby for me, but it’s become one of my
+          favorite ways to turn ideas into interactive experiences. Whether I’m
+          teaching or tinkering with new tech, I love learning, building, and
+          sharing what I discover.
+        </p>
+      </div>
+      <div class="about-page-btn-middle">
+        <div class="about-page-btn">
+          <button class="about-btn" onclick="location.href='CV-content.html'">
+            <img src="img/file-icon.png" alt="File icon" />
+            <span>Download CV</span>
+          </button>
+        </div>
+        <div class="about-page-btn">
+          <button class="about-btn" onclick="location.href='education-bg.html'">
+            <img
+              src="img/educational-background.png"
+              alt="Educational Background Icon"
+            />
+            <span>Educational Background</span>
+          </button>
+        </div>
+      </div>
+      <div class="buttom-tabs-about-page">
+        <div class="buttom-tab-about">
+          <div class="upper-tab-section-about">
+            <div class="tab-icon-about">
+              <img src="img/cod.png" />
+            </div>
+            <h3>4</h3>
+          </div>
+          <div class="lower-tab-section-about">
+            <div class="lower-tab-text">
+              <h5>Total Projects</h5>
+              <p>AR App / Website / Figma</p>
+            </div>
+            <div class="lower-tab-icon"><img src="img/openIcon.png" /></div>
+          </div>
+        </div>
+        <div class="buttom-tab-about">
+          <div class="upper-tab-section-about">
+            <div class="tab-icon-about">
+              <img src="img/goldRibon.png" />
+            </div>
+            <h3>2</h3>
+          </div>
+          <div class="lower-tab-section-about">
+            <div class="lower-tab-text">
+              <h5>Certificates</h5>
+              <p>Awards / Seminars / Courses</p>
+            </div>
+            <div class="lower-tab-icon"><img src="img/openIcon.png" /></div>
+          </div>
+        </div>
+        <div class="buttom-tab-about">
+          <div class="upper-tab-section-about">
+            <div class="tab-icon-about">
+              <img src="img/world.png" />
+            </div>
+            <h3>1</h3>
+          </div>
+          <div class="lower-tab-section-about">
+            <div class="lower-tab-text">
+              <h5>Years of Experience</h5>
+              <p>Internship / Jobs</p>
+            </div>
+            <div class="lower-tab-icon"><img src="img/openIcon.png" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="Portfolio-page" id="Portfolio-page">
+      <div class="text-section-portfolio">
+        <h3>Portfolio Showcase</h3>
+        <p>
+          A collection of my projects in design, development, and interactive
+          media — where creativity meets code.
+        </p>
+      </div>
+      <div class="tabs-portfolio-page">
+        <div class="tab-btn-portfolio">
+          <button class="tabs-button-portfolio active" data-tab="projects">
+            <img src="img/codeIcon.png" alt="" />Projects
+          </button>
+          <button class="tabs-button-portfolio" data-tab="certificates">
+            <img src="img/certIcon.png" alt="" />Certificates
+          </button>
+          <button class="tabs-button-portfolio" data-tab="techstack">
+            <img src="img/techStackIcon.png" alt="" />Tech Stack
+          </button>
+        </div>
+
+        <div class="tab-content" id="projects">
+          <div class="project-box">
+            <div class="project-Image"><img src="img/ArnetImage2.png" /></div>
+            <h3>Arnet</h3>
+            <p class="project-description">
+              An AR e-learning app for the Data Communication and Networking
+              course, turning abstract concepts into interactive 3D experiences.
+            </p>
+            <div class="project-box-buttons">
+              <div class="box-button-project-Live-demo">
+                <p>Live Demo</p>
+                <img src="img/openIcon.png" />
+              </div>
+              <div class="box-button-project-Details">
+                <p><a href="project-content.html">Details</a></p>
+                <img src="img/goto.png" />
+              </div>
+            </div>
+          </div>
+          <div class="project-box">
+            <div class="project-Image"></div>
+            <h3>Arnet V2 (UI/UX)</h3>
+            <p class="project-description">
+              Arnet V2 features a redesigned interface with a cleaner layout,
+              improved navigation, and a modern visual style for a better user
+              experience.
+            </p>
+            <div class="project-box-buttons">
+              <div class="box-button-project-Live-demo">
+                <p>Live Demo</p>
+                <img src="img/openIcon.png" />
+              </div>
+              <div class="box-button-project-Details">
+                <p><a href="ArnetV2.html">Details</a></p>
+                <img src="img/goto.png" />
+              </div>
+            </div>
+          </div>
+          <div class="project-box">
+            <div class="project-Image"></div>
+            <h3>Love-Odio</h3>
+            <p class="project-description">
+              A travel website showcasing tourist spots, restaurants, hotels,
+              and beaches in Odiongan, Romblon.
+            </p>
+            <div class="project-box-buttons">
+              <div class="box-button-project-Live-demo">
+                <p>Live Demo</p>
+                <img src="img/openIcon.png" />
+              </div>
+              <div class="box-button-project-Details">
+                <p><a href="project1-content.html">Details</a></p>
+                <img src="img/goto.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content" id="certificates" style="display: none">
+          <div class="certificate-boxes">
+            <div class="certificate-Image"></div>
+          </div>
+          <div class="certificate-boxes">
+            <div class="certificate-Image"></div>
+          </div>
+          <div class="certificate-boxes">
+            <div class="certificate-Image"></div>
+          </div>
+        </div>
+        <div class="tab-content" id="techstack" style="display: none">
+          <div class="skill-boxes">
+            <div class="box-skill">
+              <img src="img/FigmaLogo.png" alt="Figma" />
+              <p>Figma</p>
+            </div>
+            <div class="box-skill">
+              <img src="img/FlutterLogo.png" alt="Flutter" />
+              <p>Flutter</p>
+            </div>
+            <div class="box-skill">
+              <img src="img/ReactLogo.png" alt="React" />
+              <p>React</p>
+            </div>
+            <div class="box-skill">
+              <img src="img/HTMLLogo.png" alt="HTML" />
+              <p>HTML</p>
+            </div>
+            <div class="box-skill">
+              <img src="img/CSSLogo.png" alt="CSS" />
+              <p>CSS</p>
+            </div>
+            <div class="box-skill">
+              <img src="img/JSLogo.png" alt="JavaScript" />
+              <p>JavaScript</p>
+            </div>
+            <div class="box-skill">
+              <img src="img/UnityLogo.png" alt="Unity" />
+              <p>Unity</p>
+            </div>
+            <div class="box-skill">
+              <img src="img/blender-2.png" alt="Blender" />
+              <p>Blender</p>
+            </div>
+            <div class="box-skill">
+              <img src="img/Csharp_Logo.png" alt="Blender" />
+              <p>C#</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="Contact-page" id="Contact-page">
+      <div class="upper-text-contact">
+        <h2>Contact Me</h2>
+        <p>
+          Have a project in mind or just want to say hi? I’d love to hear from
+          you!
+        </p>
+      </div>
+      <div class="buttom-section-contact">
+        <div class="buttom-left-section-contact">
+          <div class="comment-section-container">
+            <div class="comment-upper-contact">
+              <div class="comment-icon-container">
+                <img src="img/commentIcon.png" />
+              </div>
+              <h4>Comments</h4>
+              <p>(0)</p>
+            </div>
+            <div class="line-comment-section"></div>
+            <div class="comment-bottom-contact">
+              <label>Name<span> *</span></label>
+              <input
+                type="text"
+                id="comment-name"
+                placeholder="Enter your name"
+              />
+
+              <div class="input-message-contact">
+                <label>Message<span> *</span></label>
+                <textarea
+                  id="comment-message"
+                  placeholder="Type a comment..."
+                ></textarea>
+              </div>
+              <div class="choose-photo-button-comment-container">
+                <button class="choose-profile-photo">
+                  <img src="img/uploadImageIcon.png" />Choose Profile Photo
+                </button>
+                <p>Max file size: 5MB</p>
+              </div>
+              <button
+                id="post-comment-btn"
+                class="upload-photo-btn"
+                onclick="location=href='#'"
+              >
+                <img src="img/sendCommentIcon.png" /><span>Post Comment</span>
+              </button>
+            </div>
+
+            <div class="line-comment-section"></div>
+            <div class="comment-list-container" id="comment-list">
+              <div class="comment-item">
+                <div class="comment-name-image">
+                  <img src="img/githubIcon.png" />
+                  <div class="comment-item-text">
+                    <h3 class="commenter-name">Sample Name</h3>
+                  </div>
+                </div>
+                <p class="commenter-comment">This is a comment...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-section-contact">
+          <dic class="connect-with-me-container">
+            <div class="upper-connect-with-me">
+              <div class="connect-with-me-upper-line"></div>
+              <h3>Connect With Me</h3>
+            </div>
+            <div class="line-connect-with-me"></div>
+            <div class="socials-connect-with-me">
+              <div class="linkedIn-connect-with-me">
+                <img src="img/linkedInBW.png" />
+                <div class="socials-connect-with-me-text">
+                  <h4>Let's Connect</h4>
+                  <p>On LinkedIn</p>
+                </div>
+              </div>
+              <div class="Email-connect-with-me">
+                <img src="img/emailIcon.png" />
+                <div class="socials-connect-with-me-text">
+                  <h4>Email</h4>
+                  <p>@user_name</p>
+                </div>
+              </div>
+              <div class="GitHub-connect-with-me">
+                <img src="img/githubIcon.png" />
+                <div class="socials-connect-with-me-text">
+                  <h4>GitHub</h4>
+                  <p>@user_name</p>
+                </div>
+              </div>
+              <div class="Insta-connect-with-me">
+                <img src="img/IgBW.png" />
+                <div class="socials-connect-with-me-text">
+                  <h4>Instagram</h4>
+                  <p>@user_name</p>
+                </div>
+              </div>
+              <div class="tiktok-connect-with-me">
+                <img src="img/tiktokIcon.png" />
+                <div class="socials-connect-with-me-text">
+                  <h4>Tiktok</h4>
+                  <p>@user_name</p>
+                </div>
+              </div>
+            </div>
+          </dic>
+        </div>
+      </div>
+    </section>
+
+    <div class="chat-button" id="chat-button">
+      <img src="img/message.png" alt="Chat" />
+    </div>
+
+    <!-- Chat Window -->
+    <div class="chat-overlay" id="chat-overlay">
+      <div class="chat-header">
+        <div class="chat-header-left">
+          <img src="img/image_hero.png" alt="Me" />
+          <div>
+            <h4>Amer</h4>
+            <p>Online</p>
+          </div>
+        </div>
+        <button class="close-chat" id="close-chat">×</button>
+      </div>
+
+      <!-- Email Field -->
+      <div class="chat-email-top">
+        <label for="user-email">Email:</label>
+        <input
+          type="email"
+          id="user-email"
+          placeholder="Enter your email..."
+          required
+        />
+      </div>
+
+      <!-- Chat Body -->
+      <div class="chat-body" id="chat-body">
+        <div class="chat-message bot">
+          <p>Hey there 👋 — please enter your email above to start chatting.</p>
+        </div>
+      </div>
+
+      <!-- Message Input -->
+      <div class="chat-input" id="chat-input">
+        <input
+          type="text"
+          id="user-message"
+          placeholder="Type a message..."
+          disabled
+        />
+        <button id="send-btn" disabled>
+          <img src="img/sendMessageIcon.png" />
+        </button>
+      </div>
+    </div>
+
+    <script src="js/portfolio-page-tabs.js"></script>
+    <script src="js/nav-active.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="js/job-hero-animation.js"></script>
+    <script src="js/chat-popup.js"></script>
+    <script src="js/nav-bar-responsive.js"></script>
+  </body>
+</html>

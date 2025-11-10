@@ -1,0 +1,96 @@
+@media (max-width: 1024px) {
+  .Hero-page {
+    flex-direction: column; /* stack text and image vertically */
+    gap: 50px;
+    padding: 120px 20px;
+    text-align: center;
+    height: auto;
+  }
+
+  .text-section-Hero-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-page-btn-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-section-Hero-page {
+    width: 100%;
+    max-width: 400px;
+  }
+  .upper-text-About-page h3 {
+    font-size: 28px;
+  }
+  .upper-text-About-page p {
+    font-size: 11px;
+    max-width: 90%;
+  }
+  .Portfolio-page {
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .tab-btn-portfolio {
+    flex-wrap: wrap;
+  }
+  .tabs-button-portfolio,
+  .tabs-button-portfolio:hover,
+  .tabs-button-portfolio.active{
+    border-radius: 5px;
+  }
+  .tabs-button-portfolio {
+    width: 250px;
+  }
+
+  .tab-content {
+    width: 100%;
+  }
+  .upper-text-contact h3{
+    font-size: 28px;
+  }
+  .comment-section-container{
+     width: 600px;
+  }
+  .project-content{
+    padding: 120px 20px;
+  }
+  .project-description-image{
+    justify-content: center;
+  }
+  .upper-content-button{
+    justify-content: center;
+  }
+  .text-section-projects-content{
+    text-align: center;
+  }
+  .project-content-text-description-button{
+    justify-content: center;
+  }
+  .technolies-used-project-text{
+    display: flex;
+    align-items: center;
+  }
+  .education-bg-content{
+      padding: 120px 20px;
+  }
+  .upper-education-button{
+    width: 100%;
+  }
+  .upper-education-button{
+    justify-content: center;
+    align-items: center;
+  }
+  .School-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+}

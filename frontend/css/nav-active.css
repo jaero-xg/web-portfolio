@@ -1,0 +1,16 @@
+
+.navbar a{
+    text-decoration: none;
+    color: #1A1A1A;
+    transition: all 0.3s ease;
+    font-weight: lighter;
+    font-family: 'Work Sans';
+}
+.navbar a.active {
+    color: #1A1A1A;
+    font-weight: bold;
+}
+.navbar a:hover{
+   color: #1A1A1A;
+    font-weight: bold;
+}

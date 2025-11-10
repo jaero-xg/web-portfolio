@@ -1,0 +1,92 @@
+.education-bg-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    background: #ffffff;
+    color: #000000;
+    padding: 120px 100px 60px; /* top padding for fixed header */
+    box-sizing: border-box;
+    flex-wrap: wrap; /* allow wrapping when screen gets smaller */
+    gap: 20px;
+}
+.upper-education-button{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+}
+.School-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+    gap: 20px;
+}
+.school-item{
+    background: rgba(255, 255, 255, 0.85); /* slightly translucent */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12); /* softer, more natural shadow */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    width: 615px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.uppersection-school-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    
+}
+.upper-text-school-item{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.upper-text-school-item h4{
+    font-family: 'Inter';
+    font-weight: lighter;
+    font-size: 12px;
+}
+.upper-text-school-item h2{
+    font-family: 'Work Sans';
+    font-weight: bold;
+    font-size: 18px;
+}
+.upper-text-school-item h5{
+    font-family: 'Work Sans';
+    font-weight: bold;
+    font-size: 14px;
+}
+.upper-text-school-item h6{
+    font-family: 'Inter';
+    font-weight: lighter;
+    font-size: 12px;
+}
+
+.upper-image-school-Item img{
+    height: 115px;
+    width: auto;
+}
+.lowersection-school-item{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.lowersection-school-item h4{
+    font-family: 'Work Sans';
+    font-size: 14px;
+}
+.lowersection-school-item p{
+    font-family: 'Inter';
+    font-size: 12px;
+    text-indent: 40px;
+}

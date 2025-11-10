@@ -1,0 +1,220 @@
+@media (max-width: 768px) {
+  .Hero-page {
+    flex-direction: column; /* stack text and image vertically */
+    gap: 50px;
+    padding: 120px 20px;
+    text-align: center;
+    height: 100%;
+  }
+
+  .text-section-Hero-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-page-btn-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Job-Hero-page h3 {
+    font-size: 32px;
+  }
+
+  .hero-page-current-Job h4 {
+    font-size: 20px;
+  }
+  
+
+  .Hero-image img {
+    max-width: 350px;
+  }
+
+
+
+  .About-page {
+    padding: 80px 6vw;
+  }
+
+  .upper-text-About-page {
+    width: 100%;
+  }
+
+  .upper-text-About-page h3 {
+    font-size: 24px;
+  }
+
+  .about-page-btn-middle {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Portfolio-page {
+    height: auto;
+    padding: 100px 20px;
+    gap: 30px;
+  }
+
+  .text-section-portfolio h3 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .text-section-portfolio p {
+    font-size: 11px;
+    text-align: center;
+    width: 90%;
+  }
+
+  .tab-btn-portfolio {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .tabs-button-portfolio {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .tab-content {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .project-box h3,
+  .project-description {
+    width: 100%;
+    text-align: left;
+  }
+
+  .box-button-project-Live-demo{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    gap: 10px; 
+}
+.box-button-project-Live-demo img{
+    height: 15px;
+}
+.box-button-project-Live-demo a{
+    text-decoration: none;
+    color: black;
+}
+.box-button-project-Details{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    gap: 10px; 
+}
+.box-button-project-Details img{
+    height: 15px;
+}
+.box-button-project-Details a{
+    text-decoration: none;
+    color: black;
+}
+
+  .skill-boxes {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .tabs-button-portfolio,
+  .tabs-button-portfolio:hover,
+  .tabs-button-portfolio.active{
+    border-radius: 5px;
+  }
+  .skill-boxes{
+    gap: 5px;
+  }
+  .box-skill {
+   width: 124px;
+   flex-direction: row;
+   height: auto;
+   padding: 10px;
+   border-radius: 5px;
+  }
+  .box-skill img{
+    width: auto;
+    height: 20px;
+}
+  .upper-text-contact h2{
+    font-size: 24px;
+  }
+  .comment-section-container{
+    width: 400px;
+  }
+  .project-content{
+    padding: 80px 6vw;
+  }
+  .project-description-image{
+    justify-content: center;
+    text-align: center;
+  }
+  .project-image-feature{
+    width: 400px;
+  }
+    .project-image-feature img{
+    width: 400px;
+  }
+  .imge-project-content-features{
+   justify-content: center;
+  }
+  .text-section-projects-content{
+    width: 100%;
+  }
+  .text-section-projects-content h2{
+    width: 100%;
+    font-size: 26px;
+  }
+  .text-section-projects-content p{
+    width: 100%;
+    font-size: 12px;
+  }
+    .school-item{
+    width: 100%;
+  }
+  .upper-text-school-item h4{
+    font-family: 'Inter';
+    font-weight: lighter;
+    font-size: 10px;
+}
+.upper-text-school-item h2{
+    font-family: 'Work Sans';
+    font-weight: bold;
+    font-size: 14px;
+}
+.upper-text-school-item h5{
+    font-family: 'Work Sans';
+    font-weight: bold;
+    font-size: 11px;
+}
+.upper-text-school-item h6{
+    font-family: 'Inter';
+    font-weight: lighter;
+    font-size: 11px;
+}
+.lowersection-school-item h4{
+    font-family: 'Work Sans';
+    font-size: 11px;
+}
+.lowersection-school-item p{
+    font-family: 'Inter';
+    font-size: 11px;
+    text-indent: 40px;
+}
+.upper-image-school-Item img{
+    height: 80px;
+    width: auto;
+}
+
+}
