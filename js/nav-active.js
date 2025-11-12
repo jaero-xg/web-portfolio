@@ -1,6 +1,9 @@
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".navbar a");
 
+const menuToggle = document.getElementById("menu-toggle");
+const navlinks = document.getElementById("navLinks");
+
 window.addEventListener("scroll", () => {
   let current = "";
 
@@ -19,9 +22,6 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-
-const menuToggle = document.getElementById("menu-toggle");
-const navlinks = document.getElementById("navLinks");
 
 menuToggle.addEventListener("click", () => {
   navlinks.classList.toggle("open");
