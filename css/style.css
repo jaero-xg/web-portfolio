@@ -207,7 +207,7 @@ header {
   -webkit-backdrop-filter: blur(6px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 10px;
+  border-radius: 5px;
   font-weight: bold;
   font-size: 11px;
   margin-bottom: 20px;
@@ -231,7 +231,7 @@ header {
   background-color: black;
   transition: width 0.4s ease;
   z-index: 0;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 /* On hover — slide overlay from left to right */
@@ -424,7 +424,7 @@ header {
     -webkit-backdrop-filter: blur(6px);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12); /* softer, more natural shadow */
     border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 10px;
+    border-radius: 5px;
     gap: 5px;
     font-family: 'Work Sans';
     font-weight: bold;
@@ -777,7 +777,7 @@ header {
     height: auto;
     width: 400px;
     border: 1px solid #E6E6E6;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 20px;
 }
 .upper-connect-with-me{
@@ -825,7 +825,7 @@ header {
     gap: 10px;
     padding: 10px;
     border: 1px solid #E4E4E4;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 .linkedIn-connect-with-me:hover{
@@ -846,7 +846,7 @@ header {
     gap: 10px;
     padding: 10px;
     border: 1px solid #E4E4E4;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 .Email-connect-with-me:hover{
@@ -867,7 +867,7 @@ header {
     gap: 10px;
     padding: 10px;
     border: 1px solid #E4E4E4;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 .GitHub-connect-with-me:hover{
@@ -887,7 +887,7 @@ header {
     gap: 10px;
     padding: 10px;
     border: 1px solid #E4E4E4;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 .tiktok-connect-with-me:hover{
@@ -907,7 +907,7 @@ header {
     gap: 10px;
     padding: 10px;
     border: 1px solid #E4E4E4;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 .Insta-connect-with-me:hover{
