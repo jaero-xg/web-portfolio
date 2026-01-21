@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -62,7 +62,10 @@
           </div>
         </div>
         <div class="hero-page-current-Job">
-          <h4>University Lecturer</h4>
+          <h4>
+            <div class="active-status"></div>
+            University Lecturer
+          </h4>
         </div>
         <div class="Hero-page-description">
           <p>
@@ -73,12 +76,15 @@
         <div class="hero-page-btn-bottom">
           <button
             class="hero-page-btn"
-            onclick="location.href='#Portfolio-page'"
+            onclick="location.href = '#Portfolio-page'"
           >
             <span>Projects</span>
             <img src="img/openIcon.png" alt="Project Icon" />
           </button>
-          <button class="hero-page-btn" onclick="location.href='#Contact-page'">
+          <button
+            class="hero-page-btn"
+            onclick="location.href = '#Contact-page'"
+          >
             <span>Contact</span>
             <img src="img/contactIcon.png" alt="Contact Icon" />
           </button>
@@ -115,13 +121,16 @@
       </div>
       <div class="about-page-btn-middle">
         <div class="about-page-btn">
-          <button class="about-btn" onclick="location.href='CV-content.html'">
+          <button class="about-btn" onclick="location.href = 'CV-content.html'">
             <img src="img/file-icon.png" alt="File icon" />
             <span>Download CV</span>
           </button>
         </div>
         <div class="about-page-btn">
-          <button class="about-btn" onclick="location.href='education-bg.html'">
+          <button
+            class="about-btn"
+            onclick="location.href = 'education-bg.html'"
+          >
             <img
               src="img/educational-background.png"
               alt="Educational Background Icon"
@@ -353,7 +362,7 @@
               <button
                 id="post-comment-btn"
                 class="upload-photo-btn"
-                onclick="location=href='#'"
+                onclick="location = href = '#'"
               >
                 <img src="img/sendCommentIcon.png" /><span>Post Comment</span>
               </button>

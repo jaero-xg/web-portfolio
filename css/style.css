@@ -141,6 +141,12 @@ header {
     color: #00b348;
     font-size: 12px;
 }
+.active-status{
+  height:10px;
+  width: 10px;
+  background-color: #00b348;
+  border-radius: 50%;
+}
 .text-section-Hero-page{
     width: 50%;
 }
@@ -178,6 +184,9 @@ header {
   }
 }
 .hero-page-current-Job h4{
+  gap: 10px;
+   align-items: center;
+    display: flex;
     font-family: 'Inter';
     font-size: 24px;
     font-weight: lighter;
