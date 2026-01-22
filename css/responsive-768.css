@@ -217,4 +217,30 @@
     width: auto;
 }
 
+
+
+
+
+.certificate-boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 200px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    
+}
+.certificate-boxes :hover{
+    transform:  scale(1.01);
+    cursor: pointer;
+}
+.certificate-boxes img{
+    width: auto;
+    height: 200px;
+    border-radius: 5px;
+    border: 1px solid #b3b3b3;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
 }

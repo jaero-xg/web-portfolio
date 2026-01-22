@@ -160,20 +160,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: auto;
+    height: 230px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
     
 }
-.certificate-Image:hover{
+.certificate-boxes :hover{
     transform:  scale(1.01);
     cursor: pointer;
 }
-.certificate-Image{
-    width: 315px;
+.certificate-boxes img{
+    width: auto;
     height: 230px;
-    background-color: #ffffff;
-    border: 1px solid #b3b3b3;
     border-radius: 5px;
+    border: 1px solid #b3b3b3;
+    overflow: hidden;
     transition: all 0.3s ease;
 }
+
+
+
 .skill-boxes {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 4 equal columns */
