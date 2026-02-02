@@ -92,5 +92,8 @@
     align-items: center;
     justify-content: center;
   }
+  .connect-with-me-container{
+    width: 800px;
+  }
   
 }

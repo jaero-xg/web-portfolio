@@ -243,4 +243,7 @@
     overflow: hidden;
     transition: all 0.3s ease;
 }
+.connect-with-me-container{
+  width: 400px;
+}
 }
