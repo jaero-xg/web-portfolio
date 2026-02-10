@@ -222,8 +222,9 @@
 }
 
 .resume-image{
-    height: 800px;
-    width: 600px;
+    height: auto;
+    max-width: 1200px;
+    min-width: 400px;
     background-color: #eeeeee;
     border-radius: 10px;
 }

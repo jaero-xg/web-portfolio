@@ -1,0 +1,56 @@
+.cv-content-text-description-button{
+    display: flex;
+    gap: 10px;
+}
+.cv-contentcontent-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 115px;
+    height: 45px;
+    font-family: 'Work Sans';
+    font-weight: 600;
+    font-size: 11px;
+    background: rgba(255, 255, 255, 0.85); /* slightly translucent */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12); /* softer, more natural shadow */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    gap: 5px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.cv-content-buttons::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: black;
+    transition: width 0.4s ease;
+    z-index: 0;
+}
+.cv-content-buttons:hover::before{
+    width: 100%;
+}
+.cv-content-buttons:hover{
+    color: white;
+}
+.cv-content-buttons img{
+    width: 15px;
+    transition: filter 0.4s ease;
+    z-index: 1;
+}
+.tech-skill-used img{
+    height: 15px;
+}
+.cv-content-buttons *{
+    position: relative;
+    z-index: 1;
+}
+.cv-content-buttons:hover img{
+    filter: invert(1);
+}

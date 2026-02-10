@@ -962,6 +962,15 @@ header {
     font-family: 'Work Sans';
     font-size: 12px;
 }
+
+
+.resume-image img{
+  height:auto;
+  max-width: 800px;
+  min-width: 400px;
+}
+
+
 html{
     scroll-behavior: smooth;
 }
