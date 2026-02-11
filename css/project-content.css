@@ -9,6 +9,17 @@
     flex-wrap: wrap; /* allow wrapping when screen gets smaller */
     gap: 20px;
 }
+.cv-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    color: #000000;
+    padding: 120px 100px 60px; /* top padding for fixed header */
+    box-sizing: border-box;
+    flex-wrap: wrap; /* allow wrapping when screen gets smaller */
+
+}
 .upper-content-button{
     display: flex;
     align-items: center;
@@ -221,10 +232,9 @@
     height: 15px;
 }
 
-.resume-image{
+.resume-image img{
     height: auto;
-    max-width: 1200px;
-    min-width: 400px;
+    width: 1300px;
     background-color: #eeeeee;
     border-radius: 10px;
 }

@@ -95,5 +95,9 @@
   .connect-with-me-container{
     width: 800px;
   }
-  
+  .resume-image img{
+    height: auto;
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
 }

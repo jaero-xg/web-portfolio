@@ -966,8 +966,7 @@ header {
 
 .resume-image img{
   height:auto;
-  max-width: 800px;
-  min-width: 400px;
+  width: 1200px;
 }
 
 

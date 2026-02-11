@@ -274,4 +274,11 @@
     overflow: hidden;
     transition: all 0.3s ease;
 }
+.resume-image img{
+    height: auto;
+    width: 400px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
+
 }

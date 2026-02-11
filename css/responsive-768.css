@@ -217,7 +217,12 @@
     width: auto;
 }
 
-
+.resume-image img{
+    height: auto;
+    width: 680px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
 
 
 
