@@ -18,7 +18,7 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12); /* softer, more natural shadow */
   border: 1px solid rgba(255, 255, 255, 0.25);
   transition: transform 0.2s ease, background-color 0.3s ease;
-  z-index: 999;
+  z-index: 99998 !important;
 }
 .chat-button:hover {
   transform: scale(1.1);
@@ -46,7 +46,7 @@
   display: none;
   flex-direction: column;
   overflow: hidden;
-  z-index: 1000;
+  z-index: 99999 !important;
   animation: slideUp 0.3s ease;
 }
 
@@ -106,7 +106,7 @@
 .chat-message {
   max-width: 80%;
   padding: 8px 12px;
-  border-radius: 10px;
+  border-radius: 15px;
   font-size: 13px;
   line-height: 1.4;
   word-wrap: break-word;
@@ -186,3 +186,51 @@
   font-size: 13px;
 }
 
+.chat-button {
+    z-index: 9999 !important;
+}
+
+.chat-overlay {
+    z-index: 10000 !important;
+    display: none; /* JS will toggle this to 'flex' */
+}
+.chat-input button {
+    position: relative;
+    z-index: 10001; /* Ensure it's above the input field background */
+    pointer-events: auto !important; /* Force clickability */
+    cursor: pointer;
+}
+
+.chat-input {
+    pointer-events: auto; /* Ensure the container allows clicks */
+}
+.chat-message.user { color: white !important; }
+.chat-message.bot { color: #333 !important; }
+.chat-body {
+    display: flex !important;
+    flex-direction: column;
+    min-height: 200px; /* Ensure there is space to see messages */
+}
+/* Typing Animation Container */
+.typing {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 15px;
+}
+
+.typing span {
+    width: 6px;
+    height: 6px;
+    background-color: #888;
+    border-radius: 50%;
+    animation: bounce 1.3s linear infinite;
+}
+
+.typing span:nth-child(2) { animation-delay: -1.1s; }
+.typing span:nth-child(3) { animation-delay: -0.9s; }
+
+@keyframes bounce {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-6px); }
+}

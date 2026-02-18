@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width>, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/portfolio-page-tabs.css" />
     <link rel="stylesheet" href="css/nav-active.css" />
@@ -79,7 +79,7 @@
             onclick="location.href = '#Portfolio-page'"
           >
             <span>Projects</span>
-            <img src="img/openIcon.png" alt="Project Icon" />
+            <img src="img/code.webp" alt="Project Icon" />
           </button>
           <button
             class="hero-page-btn"
@@ -94,7 +94,7 @@
             <img src="img/githubIcon.png" />
           </div>
           <div class="buttom-icon-hero">
-            <img src="img/linkedInBW.png" />
+            <img src="img/DiscordIcon.png" />
           </div>
           <div class="buttom-icon-hero">
             <img src="img/IgBW.png" />
@@ -423,10 +423,10 @@
                 </div>
               </div>
               <div class="tiktok-connect-with-me">
-                <img src="img/tiktokIcon.png" />
+                <img src="img/FacebookLogo.webp" />
                 <div class="socials-connect-with-me-text">
-                  <h4>Tiktok</h4>
-                  <p>@user_name</p>
+                  <h4>Facebook</h4>
+                  <p>John Amer Royo</p>
                 </div>
               </div>
             </div>
@@ -435,6 +435,7 @@
       </div>
     </section>
 
+    <!-- Chat Button -->
     <div class="chat-button" id="chat-button">
       <img src="img/message.png" alt="Chat" />
     </div>
@@ -445,50 +446,27 @@
         <div class="chat-header-left">
           <img src="img/image_hero.png" alt="Me" />
           <div>
-            <h4>Amer</h4>
-            <p>Online</p>
+            <h4>Amer - AI</h4>
+            <p>Personal Digital Assistant</p>
           </div>
         </div>
         <button class="close-chat" id="close-chat">×</button>
       </div>
 
-      <!-- Email Field -->
-      <div class="chat-email-top">
-        <label for="user-email">Email:</label>
-        <input
-          type="email"
-          id="user-email"
-          placeholder="Enter your email..."
-          required
-        />
-      </div>
+      <div class="chat-body" id="chat-body"></div>
 
-      <!-- Chat Body -->
-      <div class="chat-body" id="chat-body">
-        <div class="chat-message bot">
-          <p>Hey there 👋 — please enter your email above to start chatting.</p>
-        </div>
-      </div>
-
-      <!-- Message Input -->
-      <div class="chat-input" id="chat-input">
-        <input
-          type="text"
-          id="user-message"
-          placeholder="Type a message..."
-          disabled
-        />
-        <button id="send-btn" disabled>
-          <img src="img/sendMessageIcon.png" />
+      <div class="chat-input">
+        <input type="text" id="user-message" placeholder="Type a message..." />
+        <button id="send-btn" type="button">
+          <img src="img/sendMessageIcon.png" alt="Send" />
         </button>
       </div>
     </div>
 
+    <script src="js/chat-popup.js"></script>
     <script src="js/portfolio-page-tabs.js"></script>
     <script src="js/nav-active.js"></script>
-    <script src="js/transition.js"></script>
     <script src="js/job-hero-animation.js"></script>
-    <script src="js/chat-popup.js"></script>
     <script src="js/nav-bar-responsive.js"></script>
   </body>
 </html>

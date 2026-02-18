@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.getElementById("menuToggle");
+  const menuToggle = document.getElementById("menu-toggle");
   const navLinks = document.getElementById("navLinks");
 
   function openMenu() {
