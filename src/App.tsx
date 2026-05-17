@@ -11,25 +11,121 @@ interface ContributionDay {
   count: number;
 }
 
+const PROJECTS = [
+  {
+    num: "01",
+    year: "2026",
+    title: "Agutay NHS — SHS Mini-Scheduler",
+    desc: "Web-based scheduling system for senior high school faculty.",
+    tags: ["JavaScript", "HTML", "CSS"],
+    thumbnail: "/proj1-anhsSched.png",
+    links: [
+      {
+        type: "github" as const,
+        href: "https://github.com/jaero-xg/ANHS-SHS-Mini-Scheduler.git",
+      },
+      {
+        type: "live" as const,
+        href: "https://agutaynhs-shs-minischeduler.netlify.app/",
+      },
+    ],
+  },
+  {
+    num: "02",
+    year: "2026",
+    title: "Tech Dept Scheduler",
+    desc: "Department scheduling tool for IT faculty workload management.",
+    tags: ["JavaScript", "HTML", "CSS"],
+    thumbnail: "/proj2-techDeptSched.png",
+    links: [
+      {
+        type: "github" as const,
+        href: "https://github.com/jaero-xg/Tech-Dept-Scheduler.git",
+      },
+      { type: "live" as const, href: "https://tech-dept-mini.netlify.app/" },
+    ],
+  },
+  {
+    num: "03",
+    year: "2025",
+    title: "Arnet V2 — Proto",
+    desc: "Updated UI/UX redesign for the Arnet application interface.",
+    tags: ["Figma"],
+    thumbnail: undefined,
+    links: [
+      {
+        type: "figma" as const,
+        href: "https://www.figma.com/design/erCUHdoEffRxGGDBqcvEpA/ARNetV2?node-id=0-1&t=HPtrcyDCpo7NiVTi-1",
+      },
+      {
+        type: "live" as const,
+        href: "https://www.figma.com/proto/erCUHdoEffRxGGDBqcvEpA/ARNetV2",
+      },
+    ],
+  },
+  {
+    num: "04",
+    year: "2024",
+    title: "Arnet",
+    desc: "Augmented reality application for Data Communication and Networking course.",
+    tags: ["C#", "Unity", "Blender"],
+    thumbnail: undefined,
+    links: [
+      {
+        type: "github" as const,
+        href: "https://github.com/jaero-xg/Arnet.git",
+      },
+    ],
+  },
+  {
+    num: "05",
+    year: "2023",
+    title: "Odio-Flix",
+    desc: "Brochure-style web application with full CRUD functionality.",
+    tags: ["PHP", "JavaScript", "MySQL"],
+    thumbnail: undefined,
+    links: [
+      {
+        type: "github" as const,
+        href: "https://github.com/jaero-xg/Odio-Flix.git",
+      },
+    ],
+  },
+  {
+    num: "06",
+    year: "2023",
+    title: "Portfolio V1",
+    desc: "First iteration of personal web portfolio.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    thumbnail: undefined,
+    links: [
+      {
+        type: "github" as const,
+        href: "https://github.com/jaero-xg/portfolio-v1.git",
+      },
+    ],
+  },
+];
+
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [contributions, setContributions] = useState<ContributionDay[]>([]);
+  const [activeProject, setActiveProject] = useState<
+    (typeof PROJECTS)[0] | null
+  >(null);
 
   const [isDarkMode, setIsDarkMode] = useState(
     () => localStorage.getItem("theme") === "dark",
   );
 
-  // Apply .dark to <html> on toggle
   useEffect(() => {
     document.documentElement.classList.toggle("dark", isDarkMode);
     localStorage.setItem("theme", isDarkMode ? "dark" : "light");
   }, [isDarkMode]);
 
-  // Track which section is in viewport on scroll
   useEffect(() => {
     const sectionIds = ["home", "projects", "about", "skills", "contact"];
-
     const handleScroll = () => {
       let current = "home";
       for (const id of sectionIds) {
@@ -40,125 +136,20 @@ export default function App() {
       }
       setActiveSection(current);
     };
-
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Fetch GitHub contribution data
   useEffect(() => {
     fetch("https://github-contributions-api.jogruber.de/v4/jaero-xg?y=last")
       .then((res) => res.json())
       .then((data) => {
-        // API returns { contributions: [{ date, count }] }
         if (Array.isArray(data.contributions)) {
           setContributions(data.contributions);
         }
       })
-      .catch(() => {
-        // Silently fail — GitActivity renders a skeleton when contributions is []
-      });
+      .catch(() => {});
   }, []);
-
-  const [activeProject, setActiveProject] = useState<
-    null | (typeof PROJECTS)[0]
-  >(null);
-
-  const PROJECTS = [
-    {
-      num: "01",
-      year: "2026",
-      title: "Agutay NHS — SHS Mini-Scheduler",
-      desc: "Web-based scheduling system for senior high school faculty.",
-      tags: ["JavaScript", "HTML", "CSS"],
-      thumbnail: undefined,
-      links: [
-        {
-          type: "github" as const,
-          href: "https://github.com/jaero-xg/ANHS-SHS-Mini-Scheduler.git",
-        },
-        {
-          type: "live" as const,
-          href: "https://agutaynhs-shs-minischeduler.netlify.app/",
-        },
-      ],
-    },
-    {
-      num: "02",
-      year: "2026",
-      title: "Tech Dept Scheduler",
-      desc: "Department scheduling tool for IT faculty workload management.",
-      tags: ["JavaScript", "HTML", "CSS"],
-      thumbnail: undefined,
-      links: [
-        {
-          type: "github" as const,
-          href: "https://github.com/jaero-xg/Tech-Dept-Scheduler.git",
-        },
-        { type: "live" as const, href: "https://tech-dept-mini.netlify.app/" },
-      ],
-    },
-    {
-      num: "03",
-      year: "2025",
-      title: "Arnet V2 — Proto",
-      desc: "Updated UI/UX redesign for the Arnet application interface.",
-      tags: ["Figma"],
-      thumbnail: undefined,
-      links: [
-        {
-          type: "figma" as const,
-          href: "https://www.figma.com/design/erCUHdoEffRxGGDBqcvEpA/ARNetV2?node-id=0-1&t=HPtrcyDCpo7NiVTi-1",
-        },
-        {
-          type: "live" as const,
-          href: "https://www.figma.com/proto/erCUHdoEffRxGGDBqcvEpA/ARNetV2",
-        },
-      ],
-    },
-    {
-      num: "04",
-      year: "2024",
-      title: "Arnet",
-      desc: "Augmented reality application for Data Communication and Networking course.",
-      tags: ["C#", "Unity", "Blender"],
-      thumbnail: undefined,
-      links: [
-        {
-          type: "github" as const,
-          href: "https://github.com/jaero-xg/Arnet.git",
-        },
-      ],
-    },
-    {
-      num: "05",
-      year: "2023",
-      title: "Odio-Flix",
-      desc: "Brochure-style web application with full CRUD functionality.",
-      tags: ["PHP", "JavaScript", "MySQL"],
-      thumbnail: undefined,
-      links: [
-        {
-          type: "github" as const,
-          href: "https://github.com/jaero-xg/Odio-Flix.git",
-        },
-      ],
-    },
-    {
-      num: "06",
-      year: "2023",
-      title: "Portfolio V1",
-      desc: "First iteration of personal web portfolio.",
-      tags: ["HTML", "CSS", "JavaScript"],
-      thumbnail: undefined,
-      links: [
-        {
-          type: "github" as const,
-          href: "https://github.com/jaero-xg/portfolio-v1.git",
-        },
-      ],
-    },
-  ];
 
   return (
     <div className="app-container">
@@ -480,12 +471,12 @@ export default function App() {
             </a>
           </div>
         </section>
-        <WorkPanel
-          project={activeProject}
-          onClose={() => setActiveProject(null)}
-        />
       </main>
 
+      <WorkPanel
+        project={activeProject}
+        onClose={() => setActiveProject(null)}
+      />
       <Footer />
       <AIAssistant />
     </div>

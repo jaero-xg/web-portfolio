@@ -1,19 +1,20 @@
 import { useEffect } from "react";
 
+interface Project {
+  num: string;
+  year: string;
+  title: string;
+  desc: string;
+  tags: string[];
+  thumbnail?: string;
+  links: { type: "github" | "live" | "figma"; href: string }[];
+}
+
 interface WorkPanelProps {
-  project: {
-    num: string;
-    year: string;
-    title: string;
-    desc: string;
-    tags: string[];
-    thumbnail?: string;
-    links: { type: "github" | "live" | "figma"; href: string }[];
-  } | null;
+  project: Project | null;
   onClose: () => void;
 }
 
-// SVG icons
 const IconGithub = () => (
   <svg
     width="15"
@@ -87,7 +88,6 @@ const LABEL: Record<string, string> = {
 };
 
 export default function WorkPanel({ project, onClose }: WorkPanelProps) {
-  // Close on Escape
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -96,7 +96,6 @@ export default function WorkPanel({ project, onClose }: WorkPanelProps) {
     return () => window.removeEventListener("keydown", onKey);
   }, [onClose]);
 
-  // Lock body scroll while open
   useEffect(() => {
     document.body.style.overflow = project ? "hidden" : "";
     return () => {
@@ -106,13 +105,10 @@ export default function WorkPanel({ project, onClose }: WorkPanelProps) {
 
   return (
     <>
-      {/* Backdrop */}
       <div
         className={`panel-backdrop${project ? " active" : ""}`}
         onClick={onClose}
       />
-
-      {/* Panel */}
       <aside className={`work-panel${project ? " active" : ""}`}>
         {project && (
           <>
@@ -127,7 +123,6 @@ export default function WorkPanel({ project, onClose }: WorkPanelProps) {
               </button>
             </div>
 
-            {/* Thumbnail */}
             <div className="panel-thumb">
               {project.thumbnail ? (
                 <img src={project.thumbnail} alt={project.title} />
@@ -150,9 +145,9 @@ export default function WorkPanel({ project, onClose }: WorkPanelProps) {
               </div>
 
               <div className="panel-actions">
-                {project.links.map((link) => (
+                {project.links.map((link, i) => (
                   <a
-                    key={link.type}
+                    key={i}
                     href={link.href}
                     target="_blank"
                     rel="noopener"
