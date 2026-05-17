@@ -39,6 +39,7 @@
   --transition-base: 0.25s ease;
   --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 /* Dark Mode */
 .dark {
   --bg: #0a0a0a;
@@ -229,6 +230,10 @@ body {
 }
 
 /* ─── Main Document ─────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'BallpointSignature';
+  src: url(/public/fonts/Ballpoint\ Signature.otf) format('opentype');
+}
 .resume-document {
   max-width: 1100px;
   margin: 0 auto;
@@ -250,9 +255,9 @@ body {
 }
 
 .doc-name {
-  font-family: var(--font-display);
+  font-family: 'BallpointSignature';
   font-weight: 800;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(3.8rem, 8.5vw, 6.8rem); 
   line-height: 0.95;
   letter-spacing: -0.04em;
   color: var(--text);
