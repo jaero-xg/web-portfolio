@@ -174,7 +174,7 @@
   }
 
   .resume-document {
-    padding: calc(70px + var(--space-xl)) var(--space-md) var(--space-xl);
+    padding: calc(60px + var(--space-lg)) var(--space-md) var(--space-xl);
   }
 
   .doc-header {
@@ -327,7 +327,9 @@
 /* ─── Large Screens (min-width: 1200px) ─────────────────────────────────────── */
 @media (min-width: 1200px) {
   .resume-document {
-    max-width: 1000px;
+    max-width: 1100px;
+    padding-left: var(--space-3xl);
+    padding-right: var(--space-3xl);
   }
 
   .doc-name {
