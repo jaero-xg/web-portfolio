@@ -13,7 +13,7 @@ interface ContributionDay {
 
 const PROJECTS = [
   {
-    num: "01",
+    num: "00",
     year: "2026",
     title: "Agutay NHS — SHS Mini-Scheduler",
     desc: "Web-based scheduling system for senior high school faculty.",
@@ -31,7 +31,7 @@ const PROJECTS = [
     ],
   },
   {
-    num: "02",
+    num: "01",
     year: "2026",
     title: "Tech Dept Scheduler",
     desc: "Department scheduling tool for IT faculty workload management.",
@@ -43,6 +43,21 @@ const PROJECTS = [
         href: "https://github.com/jaero-xg/Tech-Dept-Scheduler.git",
       },
       { type: "live" as const, href: "https://tech-dept-mini.netlify.app/" },
+    ],
+  },
+  {
+    num: "02",
+    year: "2026",
+    title: "Portfolio V5",
+    desc: "Just my current web portfolio",
+    tags: ["TypeScript"],
+    thumbnail: "/proj3-techDeptSched.png",
+    links: [
+      {
+        type: "github" as const,
+        href: "https://github.com/jaero-xg/web-portfolio.git",
+      },
+      { type: "live" as const, href: "https://jaero.vercel.app/" },
     ],
   },
   {
