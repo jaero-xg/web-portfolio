@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import AIAssistant from "./components/AIAssistant";
 import Footer from "./components/Footer";
 import GitActivity from "./components/GitActivity";
+import WorkPanel from "./components/WorkPanel";
 
 interface ContributionDay {
   date: string;
@@ -59,6 +60,106 @@ export default function App() {
       });
   }, []);
 
+  const [activeProject, setActiveProject] = useState<
+    null | (typeof PROJECTS)[0]
+  >(null);
+
+  const PROJECTS = [
+    {
+      num: "01",
+      year: "2026",
+      title: "Agutay NHS — SHS Mini-Scheduler",
+      desc: "Web-based scheduling system for senior high school faculty.",
+      tags: ["JavaScript", "HTML", "CSS"],
+      thumbnail: undefined,
+      links: [
+        {
+          type: "github" as const,
+          href: "https://github.com/jaero-xg/ANHS-SHS-Mini-Scheduler.git",
+        },
+        {
+          type: "live" as const,
+          href: "https://agutaynhs-shs-minischeduler.netlify.app/",
+        },
+      ],
+    },
+    {
+      num: "02",
+      year: "2026",
+      title: "Tech Dept Scheduler",
+      desc: "Department scheduling tool for IT faculty workload management.",
+      tags: ["JavaScript", "HTML", "CSS"],
+      thumbnail: undefined,
+      links: [
+        {
+          type: "github" as const,
+          href: "https://github.com/jaero-xg/Tech-Dept-Scheduler.git",
+        },
+        { type: "live" as const, href: "https://tech-dept-mini.netlify.app/" },
+      ],
+    },
+    {
+      num: "03",
+      year: "2025",
+      title: "Arnet V2 — Proto",
+      desc: "Updated UI/UX redesign for the Arnet application interface.",
+      tags: ["Figma"],
+      thumbnail: undefined,
+      links: [
+        {
+          type: "figma" as const,
+          href: "https://www.figma.com/design/erCUHdoEffRxGGDBqcvEpA/ARNetV2?node-id=0-1&t=HPtrcyDCpo7NiVTi-1",
+        },
+        {
+          type: "live" as const,
+          href: "https://www.figma.com/proto/erCUHdoEffRxGGDBqcvEpA/ARNetV2",
+        },
+      ],
+    },
+    {
+      num: "04",
+      year: "2024",
+      title: "Arnet",
+      desc: "Augmented reality application for Data Communication and Networking course.",
+      tags: ["C#", "Unity", "Blender"],
+      thumbnail: undefined,
+      links: [
+        {
+          type: "github" as const,
+          href: "https://github.com/jaero-xg/Arnet.git",
+        },
+      ],
+    },
+    {
+      num: "05",
+      year: "2023",
+      title: "Odio-Flix",
+      desc: "Brochure-style web application with full CRUD functionality.",
+      tags: ["PHP", "JavaScript", "MySQL"],
+      thumbnail: undefined,
+      links: [
+        {
+          type: "github" as const,
+          href: "https://github.com/jaero-xg/Odio-Flix.git",
+        },
+      ],
+    },
+    {
+      num: "06",
+      year: "2023",
+      title: "Portfolio V1",
+      desc: "First iteration of personal web portfolio.",
+      tags: ["HTML", "CSS", "JavaScript"],
+      thumbnail: undefined,
+      links: [
+        {
+          type: "github" as const,
+          href: "https://github.com/jaero-xg/portfolio-v1.git",
+        },
+      ],
+    },
+  ];
+
   return (
     <div className="app-container">
       <Navbar
@@ -92,304 +193,46 @@ export default function App() {
         <section className="doc-section" id="projects">
           <div className="section-label">02 — Selected Work</div>
           <div className="work-list">
-            <article className="work-item">
-              <div className="work-meta">
-                <span className="work-num">01</span>
-                <span className="work-year">2026</span>
-              </div>
-              <div className="work-content">
-                <h3 className="work-title">Agutay NHS — SHS Mini-Scheduler</h3>
-                <p className="work-desc">
-                  Web-based scheduling system for senior high school faculty.
-                </p>
-                <div className="work-tags">
-                  <span>JavaScript</span>
-                  <span>HTML</span>
-                  <span>CSS</span>
+            {PROJECTS.map((p) => (
+              <article
+                key={p.num}
+                className="work-item work-item--clickable"
+                onClick={() => setActiveProject(p)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => e.key === "Enter" && setActiveProject(p)}
+              >
+                <div className="work-meta">
+                  <span className="work-num">{p.num}</span>
+                  <span className="work-year">{p.year}</span>
                 </div>
-              </div>
-              <div className="work-actions">
-                <a
-                  href="https://github.com/jaero-xg/ANHS-SHS-Mini-Scheduler.git"
-                  target="_blank"
-                  rel="noopener"
-                  className="work-link"
-                >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                  </svg>
-                </a>
-                <a
-                  href="https://agutaynhs-shs-minischeduler.netlify.app/"
-                  target="_blank"
-                  rel="noopener"
-                  className="work-link"
-                >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
-                  </svg>
-                </a>
-              </div>
-            </article>
-
-            <article className="work-item">
-              <div className="work-meta">
-                <span className="work-num">02</span>
-                <span className="work-year">2026</span>
-              </div>
-              <div className="work-content">
-                <h3 className="work-title">Tech Dept Scheduler</h3>
-                <p className="work-desc">
-                  Department scheduling tool for IT faculty workload management.
-                </p>
-                <div className="work-tags">
-                  <span>JavaScript</span>
-                  <span>HTML</span>
-                  <span>CSS</span>
+                <div className="work-content">
+                  <h3 className="work-title">{p.title}</h3>
+                  <p className="work-desc">{p.desc}</p>
+                  <div className="work-tags">
+                    {p.tags.map((t) => (
+                      <span key={t}>{t}</span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div className="work-actions">
-                <a
-                  href="https://github.com/jaero-xg/Tech-Dept-Scheduler.git"
-                  target="_blank"
-                  rel="noopener"
-                  className="work-link"
-                >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                  </svg>
-                </a>
-                <a
-                  href="https://tech-dept-mini.netlify.app/"
-                  target="_blank"
-                  rel="noopener"
-                  className="work-link"
-                >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
-                  </svg>
-                </a>
-              </div>
-            </article>
-
-            <article className="work-item">
-              <div className="work-meta">
-                <span className="work-num">03</span>
-                <span className="work-year">2025</span>
-              </div>
-              <div className="work-content">
-                <h3 className="work-title">Arnet V2 — Proto</h3>
-                <p className="work-desc">
-                  Updated UI/UX redesign for the Arnet application interface.
-                </p>
-                <div className="work-tags">
-                  <span>Figma</span>
+                <div className="work-actions">
+                  <span className="work-open-hint">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  </span>
                 </div>
-              </div>
-              <div className="work-actions">
-                <a
-                  href="https://www.figma.com/design/erCUHdoEffRxGGDBqcvEpA/ARNetV2?node-id=0-1&t=HPtrcyDCpo7NiVTi-1"
-                  target="_blank"
-                  rel="noopener"
-                  className="work-link"
-                >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M12 19l7-7 3 3-7 7-3-3z" />
-                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
-                    <path d="M2 2l7.586 7.586" />
-                    <circle cx="11" cy="11" r="2" />
-                  </svg>
-                </a>
-                <a
-                  href="https://www.figma.com/proto/erCUHdoEffRxGGDBqcvEpA/ARNetV2"
-                  target="_blank"
-                  rel="noopener"
-                  className="work-link"
-                >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
-                  </svg>
-                </a>
-              </div>
-            </article>
-
-            <article className="work-item">
-              <div className="work-meta">
-                <span className="work-num">04</span>
-                <span className="work-year">2024</span>
-              </div>
-              <div className="work-content">
-                <h3 className="work-title">Arnet</h3>
-                <p className="work-desc">
-                  Augmented reality application for Data Communication and
-                  Networking course.
-                </p>
-                <div className="work-tags">
-                  <span>C#</span>
-                  <span>Unity</span>
-                  <span>Blender</span>
-                </div>
-              </div>
-              <div className="work-actions">
-                <a
-                  href="https://github.com/jaero-xg/Arnet.git"
-                  target="_blank"
-                  rel="noopener"
-                  className="work-link"
-                >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                  </svg>
-                </a>
-              </div>
-            </article>
-
-            <article className="work-item">
-              <div className="work-meta">
-                <span className="work-num">05</span>
-                <span className="work-year">2023</span>
-              </div>
-              <div className="work-content">
-                <h3 className="work-title">Odio-Flix</h3>
-                <p className="work-desc">
-                  Brochure-style web application with full CRUD functionality.
-                </p>
-                <div className="work-tags">
-                  <span>PHP</span>
-                  <span>JavaScript</span>
-                  <span>MySQL</span>
-                </div>
-              </div>
-              <div className="work-actions">
-                <a
-                  href="https://github.com/jaero-xg/Odio-Flix.git"
-                  target="_blank"
-                  rel="noopener"
-                  className="work-link"
-                >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                  </svg>
-                </a>
-              </div>
-            </article>
-
-            <article className="work-item">
-              <div className="work-meta">
-                <span className="work-num">06</span>
-                <span className="work-year">2023</span>
-              </div>
-              <div className="work-content">
-                <h3 className="work-title">Portfolio V1</h3>
-                <p className="work-desc">
-                  First iteration of personal web portfolio.
-                </p>
-                <div className="work-tags">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
-                </div>
-              </div>
-              <div className="work-actions">
-                <a
-                  href="https://github.com/jaero-xg/portfolio-v1.git"
-                  target="_blank"
-                  rel="noopener"
-                  className="work-link"
-                >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                  </svg>
-                </a>
-              </div>
-            </article>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -637,6 +480,10 @@ export default function App() {
             </a>
           </div>
         </section>
+        <WorkPanel
+          project={activeProject}
+          onClose={() => setActiveProject(null)}
+        />
       </main>
 
       <Footer />
