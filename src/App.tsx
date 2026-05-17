@@ -591,6 +591,15 @@ export default function App() {
               <span className="contact-value">royojohnamer@gmail.com</span>
             </a>
             <a
+              href="https://linkedin.com/in/john-amer-royo-23856140b"
+              target="_blank"
+              rel="noopener"
+              className="contact-item"
+            >
+              <span className="contact-label">LinkedIN</span>
+              <span className="contact-value">John Amer Royo</span>
+            </a>
+            <a
               href="https://github.com/jaero-xg"
               target="_blank"
               rel="noopener"
