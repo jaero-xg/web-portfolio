@@ -423,6 +423,29 @@ export default function App() {
                 <span className="stack-item">Figma</span>
               </div>
             </div>
+            <div className="stack-category">
+              <h4 className="stack-cat-title">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z" />
+                  <path d="M12 8v4l3 3" />
+                </svg>
+                AI Tools
+              </h4>
+              <div className="stack-items">
+                <span className="stack-item">Claude</span>
+                <span className="stack-item">ChatGPT</span>
+                <span className="stack-item">Gemini</span>
+              </div>
+            </div>
           </div>
         </section>
 
