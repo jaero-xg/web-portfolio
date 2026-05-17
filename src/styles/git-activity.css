@@ -1,0 +1,232 @@
+/* ────────────────────────────────────────────────────────────────────────────
+   GitActivity.css
+   ──────────────────────────────────────────────────────────────────────────── */
+
+.ga-section {
+  padding: var(--space-xl) 0;
+}
+
+.ga-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin-bottom: var(--space-lg);
+  font-family: var(--font-body);
+}
+
+/* ─── Card shell ─────────────────────────────────────────────────────────────── */
+.ga-card {
+  border: 1px solid var(--border);
+  border-radius: 0;
+  padding: var(--space-lg);
+  background: transparent;
+}
+
+/* ─── Stats row ──────────────────────────────────────────────────────────────── */
+.ga-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin-bottom: var(--space-lg);
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 560px) {
+  .ga-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ga-stat-pill {
+  background: var(--bg-secondary);
+  border-radius: 0;
+  padding: var(--space-sm) var(--space-md);
+}
+
+.ga-stat-val {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 4px;
+  font-family: var(--font-body);
+}
+
+.ga-stat-lbl {
+  font-size: 11px;
+  color: var(--text-subtle);
+  letter-spacing: 0.04em;
+  font-family: var(--font-body);
+}
+
+/* ─── Calendar header ────────────────────────────────────────────────────────── */
+.ga-calendar-area {
+  position: relative;
+}
+
+.ga-cal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-xs);
+}
+
+.ga-cal-title {
+  font-size: 12px;
+  color: var(--text-subtle);
+  font-family: var(--font-body);
+}
+
+.ga-legend-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: var(--text-subtle);
+  font-family: var(--font-body);
+}
+
+.ga-legend-cell {
+  width: 11px;
+  height: 11px;
+  border-radius: 0;
+}
+
+/* ─── Month label row ────────────────────────────────────────────────────────── */
+.ga-month-labels {
+  display: flex;
+  padding-left: 26px;
+  margin-bottom: 4px;
+  overflow: hidden;
+}
+
+.ga-month-lbl {
+  font-size: 10px;
+  color: var(--text-subtle);
+  font-family: var(--font-body);
+  min-width: 42px;
+}
+
+/* ─── Heatmap grid ───────────────────────────────────────────────────────────── */
+.ga-cal-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ga-cal-row {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.ga-day-label {
+  font-size: 10px;
+  color: var(--text-subtle);
+  width: 22px;
+  text-align: right;
+  flex-shrink: 0;
+  font-family: var(--font-body);
+  user-select: none;
+}
+
+.ga-cells {
+  display: flex;
+  gap: 3px;
+  flex: 1;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+/* ─── Contribution cells ─────────────────────────────────────────────────────── */
+.ga-cell {
+  width: 11px;
+  height: 11px;
+  border-radius: 0;
+  flex-shrink: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.ga-cell:hover {
+  opacity: 0.7;
+}
+
+/* Light mode */
+.ga-lv0 { background: var(--bg-secondary); outline: 1px solid var(--border); outline-offset: -1px; }
+.ga-lv1 { background: #bbf7d0; }
+.ga-lv2 { background: #4ade80; }
+.ga-lv3 { background: #16a34a; }
+.ga-lv4 { background: #14532d; }
+
+/* Dark mode */
+.dark .ga-lv0 { background: #1a1a1a; outline: 1px solid var(--border); outline-offset: -1px; }
+.dark .ga-lv1 { background: #14532d; }
+.dark .ga-lv2 { background: #16a34a; }
+.dark .ga-lv3 { background: #4ade80; }
+.dark .ga-lv4 { background: #bbf7d0; }
+
+/* Legend mirrors cells */
+.ga-legend-cell.ga-lv0 { background: var(--bg-secondary); outline: 1px solid var(--border); outline-offset: -1px; }
+.ga-legend-cell.ga-lv1 { background: #bbf7d0; }
+.ga-legend-cell.ga-lv2 { background: #4ade80; }
+.ga-legend-cell.ga-lv3 { background: #16a34a; }
+.ga-legend-cell.ga-lv4 { background: #14532d; }
+
+.dark .ga-legend-cell.ga-lv1 { background: #14532d; }
+.dark .ga-legend-cell.ga-lv2 { background: #16a34a; }
+.dark .ga-legend-cell.ga-lv3 { background: #4ade80; }
+.dark .ga-legend-cell.ga-lv4 { background: #bbf7d0; }
+
+/* Skeleton pulse */
+@keyframes ga-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.9; }
+}
+
+.ga-skeleton {
+  animation: ga-pulse 1.6s ease-in-out infinite;
+}
+
+/* ─── Footer ─────────────────────────────────────────────────────────────────── */
+.ga-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ga-streak-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-subtle);
+  font-family: var(--font-body);
+}
+
+.ga-streak-num {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+.ga-gh-link {
+  font-size: 12px;
+  color: var(--text-subtle);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color var(--transition-fast);
+  font-family: var(--font-body);
+}
+
+.ga-gh-link:hover {
+  color: var(--text);
+}

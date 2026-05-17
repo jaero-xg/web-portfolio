@@ -1,0 +1,363 @@
+/* ────────────────────────────────────────────────────────────────────────────
+   RESPONSIVE STYLES
+   Mobile-first approach with breakpoints at 768px and 480px
+   ──────────────────────────────────────────────────────────────────────────── */
+
+/* ─── Tablet (max-width: 768px) ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .site-nav {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-right {
+    gap: 1.5rem;
+  }
+
+  /* Show hamburger button */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Turn nav links into a modern sliding panel */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 320px;
+    height: 100vh;
+    background: rgba(var(--bg-rgb), 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-left: 1px solid var(--border);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    transition: right var(--transition-slow);
+    z-index: 99;
+    padding: var(--space-2xl);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.03);
+  }
+
+  .dark .nav-links {
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+  }
+
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .resume-document {
+    padding: calc(70px + var(--space-2xl)) var(--space-lg) var(--space-2xl);
+  }
+
+  .header-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .doc-name {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .header-right {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    padding-top: 0;
+  }
+
+  .role-block {
+    text-align: left;
+  }
+
+  .statement-text {
+    font-size: 1.1rem;
+  }
+
+  .work-item {
+    grid-template-columns: 60px 1fr auto;
+    gap: var(--space-md);
+    padding: var(--space-md) 0;
+  }
+
+  .work-actions {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .work-title {
+    font-size: 1rem;
+  }
+
+  .work-desc {
+    font-size: 0.8rem;
+  }
+
+  .work-link {
+    opacity: 1;
+    transform: none;
+    width: 32px;
+    height: 32px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-item {
+    margin: 0;
+    border-bottom: none;
+  }
+
+  .contact-item:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: var(--space-xs);
+    text-align: center;
+  }
+}
+
+/* ─── Mobile (max-width: 480px) ───────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .site-nav {
+    padding: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-right {
+    width: auto;
+    gap: 1.25rem;
+  }
+
+  .nav-links {
+    width: 85%;
+    gap: 2rem;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    letter-spacing: 0.08em;
+  }
+
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .resume-document {
+    padding: calc(70px + var(--space-xl)) var(--space-md) var(--space-xl);
+  }
+
+  .doc-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .doc-name {
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .doc-status {
+    font-size: 0.7rem;
+  }
+
+  .header-right {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .role-block {
+    text-align: left;
+  }
+
+  .role-value {
+    font-size: 0.85rem;
+  }
+
+  .section-label {
+    font-size: 0.65rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .statement-text {
+    font-size: 1rem;
+  }
+
+  .work-item {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: var(--space-sm);
+    padding: var(--space-md) 0;
+  }
+
+  .work-meta {
+    grid-column: 1;
+    grid-row: 1;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .work-content {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .work-actions {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    flex-direction: column;
+    align-self: center;
+    gap: var(--space-xs);
+  }
+
+  .work-num {
+    font-size: 0.7rem;
+  }
+
+  .work-year {
+    font-size: 0.65rem;
+  }
+
+  .work-title {
+    font-size: 0.95rem;
+  }
+
+  .work-desc {
+    font-size: 0.75rem;
+  }
+
+  .work-tags span {
+    font-size: 0.6rem;
+    padding: 0.15rem 0.5rem;
+  }
+
+  .work-link {
+    opacity: 1;
+    transform: none;
+    width: 28px;
+    height: 28px;
+  }
+
+  .about-grid {
+    gap: var(--space-lg);
+  }
+
+  .block-title {
+    font-size: 0.7rem;
+  }
+
+  .edu-school,
+  .exp-role,
+  .cert-name {
+    font-size: 0.85rem;
+  }
+
+  .edu-detail,
+  .exp-detail,
+  .cert-issuer {
+    font-size: 0.75rem;
+  }
+
+  .stack-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .stack-cat-title {
+    font-size: 0.7rem;
+  }
+
+  .stack-item {
+    font-size: 0.8rem;
+  }
+
+  .github-wrapper {
+    padding: var(--space-sm);
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .contact-item {
+    padding: var(--space-md);
+  }
+
+  .contact-value {
+    font-size: 0.85rem;
+  }
+
+  .doc-footer {
+    margin-top: var(--space-2xl);
+  }
+
+  .footer-content {
+    font-size: 0.7rem;
+  }
+}
+
+/* ─── Large Screens (min-width: 1200px) ─────────────────────────────────────── */
+@media (min-width: 1200px) {
+  .resume-document {
+    max-width: 1000px;
+  }
+
+  .doc-name {
+    font-size: 5rem;
+  }
+
+  .statement-text {
+    font-size: 1.6rem;
+  }
+
+  .work-title {
+    font-size: 1.2rem;
+  }
+
+  .work-desc {
+    font-size: 0.9rem;
+  }
+}
+
+/* ─── Reduced Motion ────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
